@@ -16,6 +16,10 @@ def hello_two():
 
 @app.route('/rest-hello')
 def rest_hello():
+    return do_github_call()
+
+
+def do_github_call():
     return requests.get("https://api.github.com").json()
 
 
